@@ -1,0 +1,35 @@
+# Bỏ qua các thư mục build
+bin/
+obj/
+
+# Visual Studio cache
+.vs/
+*.user
+*.suo
+
+# Thư mục publish (nếu có)
+publish/
+
+# Bỏ file logs hoặc tạm
+*.log
+
+# Bỏ file môi trường user-specific
+*.userosscache
+*.sln.docstates
+
+# Bỏ Docker build nếu không cần version control
+Dockerfile
+
+# Bỏ file secrets nếu có
+secrets.json
+
+# Bỏ file database nếu có
+*.db
+
+# Bỏ file tạm của hệ điều hành
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Bỏ file tạm của macOS (nếu có)
+.DS_Store
