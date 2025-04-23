@@ -1,5 +1,19 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
   font-size: 14px;
+  height: auto;
+}
+
+body {
+    background-color: #e1cfa7;
+    position: relative;
 }
 
 @media (min-width: 768px) {
@@ -13,10 +27,134 @@ html {
 }
 
 html {
-  position: relative;
   min-height: 100%;
 }
-
-body {
-  margin-bottom: 60px;
+.splide__slide img {
+    width: 100%;
+    height: auto;
+    /*padding: 10px 10px 10px 10px;*/
+    object-fit: cover;
 }
+
+.thumbnails {
+    display: flex;
+    margin: 1rem auto 0;
+    padding: 0;
+    justify-content: center;
+}
+
+
+.thumbnail {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    list-style: none;
+    margin: 0 0.2rem;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.thumbnail.is-active {
+    opacity: 1;
+}
+
+.thumbnail img {
+    width: auto;
+    height: 80px;
+}
+
+/*Navbar start*/
+.offcanvas-logo {
+    font-family: "Playwrite AU SA", cursive;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+.nav-item .nav-link.active, a.navbar-text:hover {
+    color: #175566 !important;
+}
+a.navbar-text {
+    position: relative;
+    font-family: 'Pacifico', cursive;
+    font-weight: 300;
+    font-size: 18px;
+    padding-top: 25px!important;
+    padding-left: 20px!important;
+    padding-right: 20px!important;
+    padding-bottom: 25px!important;
+    transition: all 0.3s;
+}
+a.navbar-text::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 50%;
+    margin-top: -4px;
+    width: 8px;
+    height: 8px;
+    border: 3px solid;
+    box-sizing: border-box;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s;
+    border-color: #ff91a4;
+}
+a.navbar-text:hover::after,
+a.navbar-text.active::after {
+    opacity: 1;
+    transform: scale(1);
+}
+.nav-logo {
+    position: relative;
+}
+.nav-logo a img {
+    position: absolute;
+    background-color: transparent !important;
+    width: 180px;
+    height: 180px;
+}
+.nav-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+/*Navbar end*/
+
+
+
+
+/*Footer start*/
+.footer-container {
+    position: relative;
+}
+
+.wave-up {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    z-index: 2;
+    line-height: 0;
+}
+
+.wave-up svg {
+    display: block;
+    width: 100%;
+    height: 100px;
+    transform: rotate(180deg); /* ✅ Lật sóng hướng lên trên */
+}
+
+.bg-footer {
+    background-color: #175566;
+    position: relative;
+    z-index: 1;
+    padding-top: 100px; /* để không bị wave che nội dung */
+}
+
+/*Footer end*/
+
