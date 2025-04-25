@@ -1,5 +1,6 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&family=Playwrite+RO:wght@100..400&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -8,26 +9,28 @@
 
 html {
   font-size: 14px;
-  height: auto;
+  height: 100%;
+  overflow: hidden;
 }
-
-body {
-    background-color: #e1cfa7;
-    position: relative;
-}
-
 @media (min-width: 768px) {
   html {
     font-size: 16px;
   }
 }
-
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.content {
+    flex: 1;
+}
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
-
-html {
-  min-height: 100%;
+a {
+    text-decoration: inherit;
 }
 .splide__slide img {
     width: 100%;
@@ -140,6 +143,7 @@ a.navbar-text.active::after {
     overflow: hidden;
     z-index: 2;
     line-height: 0;
+    margin-bottom: -5px;
 }
 
 .wave-up svg {
@@ -155,6 +159,41 @@ a.navbar-text.active::after {
     z-index: 1;
     padding-top: 100px; /* để không bị wave che nội dung */
 }
-
+a.footer-a {
+    position: relative;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+    /*z-index: 1;*/
+}
+a.footer-a img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+a.footer-a:hover i{
+    color: #ffffff!important;
+}
+a.footer-a:hover img{
+    mix-blend-mode: multiply;
+    filter: drop-shadow(1px 1px 5px black);
+}
+div.footer-first-content {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+}
+div.footer-thir-content {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+div.footer-thir-content h3, div.footer-first-content h3{
+    font-family: "Playwrite AU SA", cursive;
+    font-weight: bold;
+}
 /*Footer end*/
 
