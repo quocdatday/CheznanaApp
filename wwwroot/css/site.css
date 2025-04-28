@@ -1,16 +1,19 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&family=Playwrite+RO:wght@100..400&display=swap');
+:root {
+    --sub-banner-color: #ff6550;
+    --sub-banner-border-radius: 137px;
+    --featured-color: #f04b2e;
+    --featured-border-radius: 20px;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 html {
-  font-size: 14px;
-  height: 100%;
-  overflow: hidden;
+    height: 100%;
 }
 @media (min-width: 768px) {
   html {
@@ -20,8 +23,19 @@ html {
 body {
   height: 100%;
   margin: 0;
+  overflow: scroll;
   display: flex;
   flex-direction: column;
+}
+
+.text-font-special {
+  font-family: 'Playwrite AU SA', cursive;
+  font-weight: 300;
+  font-style: normal;
+  font-weight: bold;
+}
+.text-font-orange {
+    color: #ff6550!important;
 }
 .content {
     flex: 1;
@@ -197,3 +211,83 @@ div.footer-thir-content h3, div.footer-first-content h3{
 }
 /*Footer end*/
 
+/*Index start*/
+.carousel-parent-fade {
+    position: absolute!important;
+}
+.carousel-img-fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    /*aspect-ratio: 16/9;*/
+    object-fit: cover;
+}
+.carousel-wave {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 40px;
+    z-index: 2;
+    transform: rotate(180deg);
+    background: url('../img/background/down2.png') repeat-x;
+}
+.carousel-wave svg {
+    width: auto;
+    overflow-x: hidden;
+}
+
+.sub-banner div.row div div.dash-left, .sub-banner div.row div div.dash-right {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border-bottom: 3px solid var(--sub-banner-color);
+}
+.dash-left {
+    top: 0;
+    right: 0;
+}
+.dash-right {
+    top: 0;
+    left: 0;
+}
+
+.sub-banner-icon {
+    width: 64px;
+    height: 64px;
+}
+.sub-banner-img div img {
+    border-radius: var(--sub-banner-border-radius) var(--sub-banner-border-radius) var(--sub-banner-border-radius) var(--sub-banner-border-radius);
+    -webkit-border-radius: var(--sub-banner-border-radius) var(--sub-banner-border-radius) var(--sub-banner-border-radius) var(--sub-banner-border-radius);
+    -moz-border-radius: var(--sub-banner-border-radius) var(--sub-banner-border-radius) var(--sub-banner-border-radius) var(--sub-banner-border-radius);
+    border: 4px solid var(--sub-banner-color);
+}
+.sub-dash {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    border-bottom: 3px solid var(--sub-banner-color);
+}
+
+#featured {
+    color: var(--featured-color);
+    display: inline-block;
+}
+#featured .container .row div img {
+    border-radius: var(--featured-border-radius) var(--featured-border-radius) var(--featured-border-radius) var(--featured-border-radius);
+    -webkit-border-radius: var(--featured-border-radius) var(--featured-border-radius) var(--featured-border-radius) var(--featured-border-radius);
+    -moz-border-radius:  var(--featured-border-radius) var(--featured-border-radius) var(--featured-border-radius) var(--featured-border-radius);
+    border: 4px solid var(--featured-color);
+}
+/*Index end*/

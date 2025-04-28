@@ -1,29 +1,233 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Trang chủ";
+    ViewData["Title"] = "Cheznana";
 }
 
-<div class="container-fluid p-0">
-    
-    @* <ul id="thumbnails" class="thumbnails">
-        <li class="thumbnail">
-            <img src="~/img/2.jpeg" alt="">
-        </li>
-        <li class="thumbnail">
-            <img src="~/img/3.jpeg" alt="">
-        </li>
-        <li class="thumbnail">
-            <img src="~/img/2.jpeg" alt="">
-        </li>
-        <li class="thumbnail">
-            <img src="~/img/3.jpeg" alt="">
-        </li>
-        <li class="thumbnail">
-            <img src="~/img/2.jpeg" alt="">
-        </li>
-    </ul> *@
+<!--Carousel start-->
+<div id="carouselExampleRide" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner ">
+        <div class="carousel-item active" data-bs-interval="2000">
+            <img src="~/img/2.jpeg" class="d-block w-100 img-fluid" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="~/img/3.jpeg" class="d-block w-100 img-fluid" alt="...">
+        </div>
+    </div>
+    <div class="carousel-img-fade">
+        <div class="carousel-wave">
+        @* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 30" width="100%">
+            <path d="M -32 18 Q -25.33 18 -18.67 24 Q -5.33 36 8 24 Q 14.67 18 21.33 18 Q 28 18 34.67 24 Q 48 36 61.33 24 Q 68 18 74.67 18 Q 81.33 18 88 24 Q 101.33 36 114.67 24 Q 121.33 18 128 18 Q 134.67 18 141.33 24 Q 154.67 36 168 24 Q 174.67 18 181.33 18 Q 188 18 194.67 24 Q 208 36 221.33 24 Q 228 18 234.67 18 Q 241.33 18 248 24 Q 261.33 36 274.67 24 Q 281.33 18 288 18 Q 294.67 18 301.33 24 Q 314.67 36 328 24 Q 334.67 18 341.33 18 Q 348 18 354.67 24 Q 368 36 381.33 24 Q 388 18 394.67 18 Q 401.33 18 408 24 Q 421.33 36 434.67 24 Q 441.33 18 448 18 Q 454.67 18 461.33 24 Q 474.67 36 488 24 Q 494.67 18 501.33 18 Q 508 18 514.67 24 Q 528 36 541.33 24 Q 548 18 554.67 18 Q 561.33 18 568 24 Q 581.33 36 594.67 24 Q 601.33 18 608 18 Q 614.67 18 621.33 24 Q 634.67 36 648 24 Q 654.67 18 661.33 18 Q 668 18 674.67 24 Q 688 36 701.33 24 Q 708 18 714.67 18 Q 721.33 18 728 24 Q 741.33 36 754.67 24 Q 761.33 18 768 18 Q 774.67 18 781.33 24 Q 794.67 36 808 24 Q 814.67 18 821.33 18 Q 828 18 834.67 24 Q 848 36 861.33 24 Q 868 18 874.67 18 Q 881.33 18 888 24 Q 901.33 36 914.67 24 Q 921.33 18 928 18 Q 934.67 18 941.33 24 Q 954.67 36 968 24 Q 974.67 18 981.33 18 Q 988 18 994.67 24 Q 1008 36 1021.33 24 Q 1028 18 1034.67 18 Q 1041.33 18 1048 24 Q 1061.33 36 1074.67 24 Q 1081.33 18 1088 18 Q 1094.67 18 1101.33 24 Q 1114.67 36 1128 24 Q 1134.67 18 1141.33 18 Q 1148 18 1154.67 24 Q 1168 36 1181.33 24 Q 1188 18 1194.67 18 Q 1201.33 18 1208 24 Q 1221.33 36 1234.67 24 Q 1241.33 18 1248 18 Q 1254.67 18 1261.33 24 Q 1274.67 36 1288 24 Q 1294.67 18 1301.33 18 L 1280 0 L 0 0 Z" fill="white"></path>
+        </svg> *@
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
+<!--Carousel end-->
+<!--Sub banner start-->
+<div class="container sub-banner mt-3 mt-lg-5 mb-3">
+    <div class="row justify-content-center">
+        <div class="col position-relative">
+            <div class="dash-left"></div>
+        </div>
+        <div class="col-auto">
+            <h1 class="text-center m-0 py-3 px-0 px-lg-3 text-font-special text-font-orange">Điều làm nên <br class="d-inline d-lg-none" />Cheznana</h1>
+        </div>
+        <div class="col position-relative">
+            <div class="dash-right"></div>
+        </div>
+    </div>
+    <!--Sub banner icon-->
+    <div class="row justify-content-center my-2">
+        <div class="col-auto p-0">
+            <div class="sub-banner-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
+                    <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" fill="#ff6550" />
+                </svg>
+            </div> 
+        </div>
+    </div>
+    <!--Sub banner image-->
+    <div class="row sub-banner-img justify-content-center">
+        <!--Sub banner image(content)-->
+        <div class="col-8 col-lg-8 pt-5">
+            <div class="row justify-content-center justify-content-lg-end">
+                <div class="d-none d-lg-block col position-relative">
+                    <div class="sub-dash"></div>
+                </div>
+                <div class="col-auto">
+                    <h5 class="p-0 m-0 text-center text-font-special text-font-orange">TÌNH YÊU VỚI <br class="d-inline d-lg-none"/> NHỮNG CHIẾC BÁNH</h5>
+                </div>
+            </div>
+            <div class="row justify-content-center justify-content-lg-end pt-2 pt-lg-5">
+                <div class="col-12 col-lg-8">
+                    <p class="m-0 p-2 text-center text-lg-end text-font-orange">
+                        CHEZ NANA ra đời từ niềm đam mê cháy bỏng, ấp ủ qua từng chiếc bánh thơm ngon. Bằng tình yêu
+                        và tâm huyết, chúng tôi không ngừng sáng tạo và hoàn thiện, để mỗi 
+                        chiếc bánh tại CHEZ NANA không chỉ đơn thuần là một món ăn mà còn là một tác phẩm 
+                        nghệ thuật, là hiện thân cho những cảm xúc và thông điệp mà bạn muốn gửi gắm.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--Sub banner image(image)-->
+        <div class="col-8 col-lg-3">
+            <img class="img-fluid p-1" src="~/img/sub_banner_img_1.png" alt="subbanner" />
+        </div>
+    </div>
+    <div class="row sub-banner-img justify-content-center">
+        <!--Sub banner image(image)-->
+        <div class="col-8 col-lg-3 order-2 order-lg-1">
+            <img class="img-fluid p-1" src="~/img/sub_banner_img_2.png" alt="subbanner" />
+        </div>
+        <!--Sub banner image(content)-->
+        <div class="col-8 col-lg-8 pt-5 order-1 order-lg-2">
+            <div class="row justify-content-center justify-content-lg-start">
+                <div class="col-auto">
+                    <h5 class="p-0 m-0 text-center text-font-special text-font-orange">
+                        SỰ CHỈNH CHU <br class="d-inline d-lg-none"/>KHI LÀM NGHỀ
+                    </h5>
+                </div>
+                <div class="d-none d-lg-block col position-relative">
+                    <div class="sub-dash"></div>
+                </div>
+            </div>
+            <div class="row justify-content-center justify-content-lg-start pt-2 pt-lg-5">
+                <div class="col-12 col-lg-8">
+                    <p class="m-0 p-2 text-center text-lg-start text-font-orange">
+                        Mỗi chiếc bánh là một sứ giả mang thông điệp ngọt ngào đến tay người thân. 
+                        Vì vậy để tạo nên một chiếc bánh hoàn hảo không chỉ đơn thuần là kết hợp nguyên liệu
+                        mà còn là sự kết hợp hài hòa giữa kỹ thuật, sáng tạo và sự chỉn chu trong từng khâu sản xuất.
+                        CHEZ NANA luôn đề cao giá trị này và biến nó thành kim chỉ nam cho mọi hoạt động của mình.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row sub-banner-img justify-content-center">
+        <!--Sub banner image(content)-->
+        <div class="col-8 col-lg-8 pt-5">
+            <div class="row justify-content-center justify-content-lg-end">
+                <div class="d-none d-lg-block col position-relative">
+                    <div class="sub-dash"></div>
+                </div>
+                <div class="col-auto">
+                    <h5 class="p-0 m-0 text-center text-font-special text-font-orange">
+                        LẮNG NGHE <br class="d-inline d-lg-none"/> VÀ THẤU HIỂU
+                    </h5>
+                </div>
+            </div>
+            <div class="row justify-content-center justify-content-lg-end pt-2 pt-lg-5">
+                <div class="col-12 col-lg-8">
+                    <p class="m-0 p-2 text-center text-lg-end text-font-orange">
+                        Tại CHEZNANA, bánh kem không chỉ là món quà, mà còn là hiện thân câu chuyện, tâm tư của bạn.
+                        Chúng tôi thấu hiểu rằng mỗi chiếc bánh đều mang thông điệp riêng, một dấu ấn kỷ niệm đặc biệt. 
+                        Chúng tôi trân trọng sứ mệnh kết nối con người qua những chiếc bánh kem, biến những khoảnh khắc
+                        bình dị trở nên đặc biệt và ý nghĩa.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--Sub banner image(image)-->
+        <div class="col-8 col-lg-3">
+            <img class="img-fluid p-1" src="~/img/sub_banner_img_3.png" alt="subbanner" />
+        </div>
+    </div>
+</div>
+<!--Sub banner end-->
+<!--Featured start-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 70" width="100%" height="70" preserveAspectRatio="none" style="margin-bottom: -5px;">
+    <defs>
+        <linearGradient id="wave-1745871849553" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="70">
+            <stop offset="0%" stop-color="#dbcfbd" />
+            <stop offset="100%" stop-color="#dbcfbd" />
+        </linearGradient>
+    </defs>
+    <path d="M -64 8 C -24 8 -24 5 16 5 C 56 5 56 62 96 62 C 136 62 136 31 176 31 C 216 31 216 46 256 46 C 296 46 296 14 336 14 C 376 14 376 15 416 15 C 456 15 456 15 496 15 C 536 15 536 38 576 38 C 616 38 616 25 656 25 C 696 25 696 65 736 65 C 776 65 776 47 816 47 C 856 47 856 62 896 62 C 936 62 936 40 976 40 C 1016 40 1016 42 1056 42 C 1096 42 1096 17 1136 17 C 1176 17 1176 59 1216 59 C 1256 59 1256 17 1296 17 L 1280 70 L 0 70 Z" fill="url(#wave-1745871849553)"></path>
+</svg>
+<div id="featured" class="container-fluid py-5" style="background: #dbcfbd;">
+    <div class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-auto text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 34" width="180" height="34">
+                    <path d="M 0 16 Q 11.25 16 22.5 10.5 Q 45 -0.5 67.5 10.5 Q 78.75 16 90 16 Q 101.25 16 112.5 10.5 Q 135 -0.5 157.5 10.5 Q 168.75 16 180 16" fill="none" stroke="#f04b2e" stroke-width="10" transform="translate(0, 6.5)"></path>
+                </svg>
+                <div>
+                    <h1 class="text-font-special mt-3">Sản phẩm nổi bật</h1>
+                    <h3 class="m-0 p-0">Cheznana</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row g-1 g-lg-2 g-1 g-lg-3 mt-3">
+            <div class="col-6">
+                <div class="row flex-column flex-lg-row pe-2 pe-lg-1">
+                    <div class="col-12 col-lg-6 p-1 pb-0">
+                        <img class="img-fluid my-1" src="~/img/featured/nam1.png" alt=".." />
+                        <img class="img-fluid my-1" src="~/img/featured/khaitruong1.png" alt=".." />
+                        <img class="img-fluid my-1" src="~/img/featured/nam2.png" alt=".." />
+                    </div>
+                    <div class="col-12 col-lg-6 p-1">
+                        <img class="img-fluid my-1" src="~/img/featured/nam7.png" alt=".." />
+                        <img class="img-fluid my-1" src="~/img/featured/nam9.png" alt=".." />
+                        <img class="img-fluid my-1" src="~/img/featured/nam8.png" alt=".." />
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row flex-column flex-lg-row ps-3 ps-lg-1">
+                    <div class="col-12 col-lg-6 p-1 pb-0">
+                        <img class="img-fluid my-1" src="~/img/featured/khaitruong2.png" alt=".." />
+                        <img class="img-fluid my-1" src="~/img/featured/nam3.png" alt=".." />
+                        <img class="img-fluid my-1" src="~/img/featured/nam4.png" alt=".." />
+                    </div>
+                    <div class="col-12 col-lg-6 p-1">
+                        <img class="img-fluid my-1" src="~/img/featured/nam7.png" alt=".." />
+                        <img class="img-fluid my-1" src="~/img/featured/khaitruong2.png" alt=".." />
+                        <img class="img-fluid my-1" src="~/img/featured/nam8.png" alt=".." />
+                        <img class="img-fluid my-1" src="~/img/featured/khaitruong2.png" alt=".." />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 70" width="100%" height="70" preserveAspectRatio="none" style="display: block; margin-top: -5px; background: #f1f5f6; vertical-align: top!important;">
+    <defs>
+        <linearGradient id="wave-1745883149917" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="70">
+            <stop offset="0%" stop-color="#dbcfbd" />
+            <stop offset="100%" stop-color="#dbcfbd" />
+        </linearGradient>
+    </defs>
+    <path d="M -35.2 37 C -3.2 37 -3.2 60 28.8 60 C 60.8 60 60.8 9 92.8 9 C 124.8 9 124.8 19 156.8 19 C 188.8 19 188.8 17 220.8 17 C 252.8 17 252.8 53 284.8 53 C 316.8 53 316.8 29 348.8 29 C 380.8 29 380.8 32 412.8 32 C 444.8 32 444.8 29 476.8 29 C 508.8 29 508.8 50 540.8 50 C 572.8 50 572.8 16 604.8 16 C 636.8 16 636.8 32 668.8 32 C 700.8 32 700.8 13 732.8 13 C 764.8 13 764.8 53 796.8 53 C 828.8 53 828.8 21 860.8 21 C 892.8 21 892.8 57 924.8 57 C 956.8 57 956.8 31 988.8 31 C 1020.8 31 1020.8 57 1052.8 57 C 1084.8 57 1084.8 16 1116.8 16 C 1148.8 16 1148.8 26 1180.8 26 C 1212.8 26 1212.8 15 1244.8 15 C 1276.8 15 1276.8 33 1308.8 33 L 1280 0 L 0 0 Z" fill="url(#wave-1745883149917)"></path>
+</svg>
+<!--Featured end-->
+<!--Section start-->
+<div class="container-fluid p-5" style="background: #f1f5f6">
+    <div class="container p-5 my-5 bg-white border border-0 rounded">
+        <div class="row justify-content-center mt-5 mb-4">
+            <div class="col-auto">
+                <h3 class="p-0 m-0 text-font-special text-center text-black">NƠI TRAO GỬI YÊU THƯƠNG</h3>
+            </div>
+        </div>
+        <div class="row justify-content-center mb-5">
+            <div class="col-10">
+                <p class="p-0 m-0 text-center text-black">
+                    ” Tại CHEZ NANA, công việc của chúng tôi không chỉ là làm bánh, mà còn là chế tác nên những
+                    tác phẩm nghệ thuật trang nhã, xứng tầm với những khoảnh khắc trọng đại của cuộc sống và 
+                    những kỷ niệm khắc sâu trong tâm trí mỗi người. “
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Section end-->
 
 @section Scripts {
 	<script>
