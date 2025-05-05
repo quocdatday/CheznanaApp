@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Cheznana</title>
     <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/scrollbar.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Cheznana.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> 
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top position-relative">
-        @* style="background: #e8d6c8; *@
         <div class="nav-wave d-none d-lg-block">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 30" width="100%">
                 <path d="M -32 18 Q -25.33 18 -18.67 24 Q -5.33 36 8 24 Q 14.67 18 21.33 18 Q 28 18 34.67 24 Q 48 36 61.33 24 Q 68 18 74.67 18 Q 81.33 18 88 24 Q 101.33 36 114.67 24 Q 121.33 18 128 18 Q 134.67 18 141.33 24 Q 154.67 36 168 24 Q 174.67 18 181.33 18 Q 188 18 194.67 24 Q 208 36 221.33 24 Q 228 18 234.67 18 Q 241.33 18 248 24 Q 261.33 36 274.67 24 Q 281.33 18 288 18 Q 294.67 18 301.33 24 Q 314.67 36 328 24 Q 334.67 18 341.33 18 Q 348 18 354.67 24 Q 368 36 381.33 24 Q 388 18 394.67 18 Q 401.33 18 408 24 Q 421.33 36 434.67 24 Q 441.33 18 448 18 Q 454.67 18 461.33 24 Q 474.67 36 488 24 Q 494.67 18 501.33 18 Q 508 18 514.67 24 Q 528 36 541.33 24 Q 548 18 554.67 18 Q 561.33 18 568 24 Q 581.33 36 594.67 24 Q 601.33 18 608 18 Q 614.67 18 621.33 24 Q 634.67 36 648 24 Q 654.67 18 661.33 18 Q 668 18 674.67 24 Q 688 36 701.33 24 Q 708 18 714.67 18 Q 721.33 18 728 24 Q 741.33 36 754.67 24 Q 761.33 18 768 18 Q 774.67 18 781.33 24 Q 794.67 36 808 24 Q 814.67 18 821.33 18 Q 828 18 834.67 24 Q 848 36 861.33 24 Q 868 18 874.67 18 Q 881.33 18 888 24 Q 901.33 36 914.67 24 Q 921.33 18 928 18 Q 934.67 18 941.33 24 Q 954.67 36 968 24 Q 974.67 18 981.33 18 Q 988 18 994.67 24 Q 1008 36 1021.33 24 Q 1028 18 1034.67 18 Q 1041.33 18 1048 24 Q 1061.33 36 1074.67 24 Q 1081.33 18 1088 18 Q 1094.67 18 1101.33 24 Q 1114.67 36 1128 24 Q 1134.67 18 1141.33 18 Q 1148 18 1154.67 24 Q 1168 36 1181.33 24 Q 1188 18 1194.67 18 Q 1201.33 18 1208 24 Q 1221.33 36 1234.67 24 Q 1241.33 18 1248 18 Q 1254.67 18 1261.33 24 Q 1274.67 36 1288 24 Q 1294.67 18 1301.33 18 L 1280 0 L 0 0 Z" fill="white"></path>
             </svg>
         </div>
         <div class="container-fluid py-3 py-lg-0">
-            <a class="navbar-brand d-lg-none offcanvas-logo" asp-page="#">Cheznana</a>
+            <a class="navbar-brand d-lg-none offcanvas-logo" asp-page="#">
+                <h1 class="m-0 ps-2">Cheznana</h1>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,7 +38,7 @@
                             <a class="nav-link navbar-text @(currentPage!.StartsWith("/privacy") ? "active" : "")" asp-page="/Privacy">Về Cheznana</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link navbar-text" asp-page="/Collection">Bộ sưu tầm</a>
+                            <a class="nav-link navbar-text @(currentPage!.StartsWith("/collection") ? "active" : "")" asp-page="/Collection">Bộ sưu tầm</a>
                         </li>
                     </ul>
                     <div class="nav-logo d-none d-lg-block" style="width:180px;">
@@ -50,7 +52,7 @@
                             <a class="nav-link navbar-text" asp-page="/Service">Dịch vụ B2B</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link navbar-text" asp-page="/Blog">Blog</a>
+                            <a class="nav-link navbar-text @(currentPage!.StartsWith("/faq") ? "active" : "")" asp-page="/Faq">FAQ</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link navbar-text" asp-page="/Contact">Liên hệ</a>
