@@ -1,4 +1,22 @@
 ﻿/* Tổng thể thanh cuộn */
-::-webkit-scrollbar {
+.scroll-hide::-webkit-scrollbar {
     display: none;
+}
+
+/* Firefox */
+.scroll-hide {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
+.scroll-small::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scroll-opacity::-webkit-scrollbar-track {
+    background: transparent; /* nền track trong suốt */
+}
+
+.scroll-opacity::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); /* màu đậm nhẹ, mờ */
+    border-radius: 4px;
 }
