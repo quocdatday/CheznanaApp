@@ -1,34 +1,26 @@
 name: Build & Deploy ASP.NET Core to Azure App Service
-
 on:
-  push:
-    branches: [ main ]   # mỗi lần bạn push code lên nhánh main, workflow này chạy
-
+  push: { branches: [ main ] }
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with: { dotnet-version: '8.0.x' }
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.x'   # đúng version .NET bạn dùng trong dự án
-
-      - name: Restore dependencies
-        run: dotnet restore
+      - name: Restore
+        run: dotnet restore Cheznana.sln
 
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build Cheznana.sln --configuration Release --no-restore
 
-      - name: Publish
-        run: dotnet publish -c Release -o publish
+      - name: Publish (project)
+        run: dotnet publish ./Cheznana.csproj -c Release -o ./publish
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
-          app-name: Cheznana                       # ⚠️ đúng TÊN App Service trên Azure
+          app-name: Cheznana
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
-          package: publish
+          package: ./publish
